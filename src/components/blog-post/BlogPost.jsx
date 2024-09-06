@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BlogPostCard } from "./BlogPostCard";
 import Link from "next/link";
-const allCategories = [
+const allArticles = [
   "All",
   "Design",
   "Travel",
@@ -11,7 +11,7 @@ const allCategories = [
 ];
 
 export const BlogPosts = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedArticles, setSelectedArticles] = useState("All");
   const [blogPostData, setBlogPostData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,7 +33,7 @@ export const BlogPosts = () => {
 
   const filteredPosts = blogPostData.filter(
     (post) =>
-      selectedCategory === "All" || post.tag_list.includes(selectedCategory)
+      selectedArticles === "All" || post.tag_list.includes(selectedArticles)
   );
 
   if (loading) {
@@ -44,15 +44,15 @@ export const BlogPosts = () => {
     <div className="max-w-7xl mx-auto pt-24 px-8">
       <h1 className="text-2xl font-bold">All Blog Posts</h1>
       <div className="text-gray-600 text-xs font-bold flex gap-5 pt-8 pb-8">
-        {allCategories.map((category) => (
+        {allArticles.map((articles) => (
           <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
+            key={articles}
+            onClick={() => setSelectedArticles(articles)}
             className={`hover:text-yellow-600 ${
-              selectedCategory === category ? "text-yellow-600" : ""
+              selectedArticles === articles ? "text-yellow-600" : ""
             }`}
           >
-            {category}
+            {articles}
           </button>
         ))}
       </div>
