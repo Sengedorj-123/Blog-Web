@@ -3,6 +3,7 @@ import { FacebookIcon } from "./icons/Facebook";
 import { InstagramIcon } from "./icons/Instagram";
 import { LinkedIcon } from "./icons/Linked";
 import { TwitterIcon } from "./icons/Twitter";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -16,16 +17,22 @@ export const Footer = () => {
             excepturi numquam fugiat?
           </h2>
         </div>
-        <div className="px-8 flex w-[60%] flex-col">
-          <button>
-            <H1Text text="Home" />
-          </button>
-          <button>
-            <H1Text text="Blog" />
-          </button>
-          <button>
-            <H1Text text="Contact" />
-          </button>
+        <div className="px-8 flex w-[60%] flex-col items-center">
+          <Link href="/homepage">
+            <button>
+              <H1Text text="Home" />
+            </button>
+          </Link>
+          <Link href="/bloglist">
+            <button>
+              <H1Text text="Blog" />
+            </button>
+          </Link>
+          <Link href="/contact-us">
+            <button>
+              <H1Text text="Contact" />
+            </button>
+          </Link>
         </div>
         <div className="flex w-[25%] flex-row justify-between">
           <div className="flex justify-start items-start gap-[20px]">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 export const Page404 = () => {
   return (
     <div className="max-w-7xl m-auto flex justify-center">
@@ -11,9 +12,11 @@ export const Page404 = () => {
             looking for.
           </h1>
           <div className="pt-[20px]">
-            <button className="bg-[#4B6BFB] px-[16px] py-[10px] rounded-[6px]">
-              Back to Home
-            </button>
+            <Link href="/">
+              <button className="bg-[#4B6BFB] px-[16px] py-[10px] rounded-[6px] text-white">
+                Back to Home
+              </button>
+            </Link>
           </div>
         </div>
       </div>

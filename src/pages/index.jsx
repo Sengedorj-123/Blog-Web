@@ -4,6 +4,8 @@
 //   const items = ["Apple", "Cherry", "Banana", "Date", "Grape"];
 // import { HomePage } from "@/components";
 
+import HomePage from "@/components/pages/HomePage";
+
 // import HomePage from "@/components/pages/HomePage";
 
 //   const filteredItems = items.filter((item) => item == searchValue);
@@ -81,9 +83,6 @@
 //   const multipliedByTwo = numbers.map((number) => number + nums);
 //   console.log(multipliedByTwo);
 // }
-import { HomePage } from "@/components/pages/HomePage";
-
-
 
 export default function Home() {
   return (

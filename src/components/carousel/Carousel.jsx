@@ -1,14 +1,13 @@
+import React, { useState, useEffect, useDeferredValue } from "react";
 import { BackIcon } from "./BackButton";
 import { ForwardIcon } from "./ForwardButton";
-
-import React, { useState, useEffect } from "react";
 
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [articles, setArticles] = useState([]);
 
   const fetchData = () => {
-    fetch("https://dev.to/api/articles")
+    fetch("https://dev.to/api/articles/")
       .then((response) => response.json())
       .then((data) => setArticles(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -27,6 +26,14 @@ export const Carousel = () => {
       (prevIndex) => (prevIndex - 1 + articles.length) % articles.length
     );
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length);
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [articles.length]);
 
   const currentItem = articles[currentIndex];
 

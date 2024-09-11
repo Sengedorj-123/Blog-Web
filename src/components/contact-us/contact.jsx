@@ -3,11 +3,11 @@ import { H1Text } from "../text";
 export const ContactUs = () => {
   return (
     <div className="max-w-7xl m-auto pt-[200px] pb-[100px] flex justify-center">
-      <div className="w-[70%]  flex justify-center flex-col flex-wrap ">
+      <div className="w-full  flex justify-center flex-col flex-wrap ">
         <div className="">
           <h1 className="text-[36px] font-[600]">Contact Us</h1>
         </div>
-        <div className="w-[70%] pt-[20px]">
+        <div className="w-full pt-[20px]">
           <h1 className="text-[16px] text-[#696A75] font-[300]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad suscipit
             aut vero magni eius, enim doloribus modi provident. Eveniet dolorum
@@ -16,17 +16,17 @@ export const ContactUs = () => {
             recusandae dicta? Consequuntur, nihil perspiciatis!
           </h1>
         </div>
-        <div className="w-[70%] flex justify-between gap-[20px] pt-[20px] pb-[40px]">
+        <div className="w-full   flex justify-between gap-[20px] pt-[20px] pb-[40px]">
           <div className="w-[50%] p-[16px] flex flex-col border rounded-[12px]">
             <h1>Address</h1>
             <h1>1328 Oak Ridge Drive, Saint Louis, Missouri</h1>
           </div>
-          <div className="w-[50%] p-[16px] flex flex-col border rounded-[12px]">
+          <div className="w-full p-[16px] flex flex-col border rounded-[12px]">
             <h1>Contact</h1>
             <h1>313-332-8662 info@email.com</h1>
           </div>
         </div>
-        <div className="w-[70%] bg-[#F6F6F7] h-auto pl-[35px] py-[29px] pr-[100px]  rounded-[10px]">
+        <div className="w-full bg-[#F6F6F7] h-auto pl-[35px] py-[29px] pr-[100px]  rounded-[10px]">
           <h1 className="text-[18px] font-[600] ">Leave a Message</h1>
           <div className="flex flex-row gap-[30px] pt-[30px]">
             <input
